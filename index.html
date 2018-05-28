@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>FUCK!</title>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap.min.js"></script>
+    <script src="JavaScript1.js"></script>
+</head>
+<body>
+    <div class="container" style="border:1px solid gray;" ng-app="myApp" ng-controller="myCtrl">
+        <div class="row">
+            <div class="col-xs-12" style="text-align:center;">
+                <div style="min-height:650px; text-align:center;">
+                    <img style="height:600px;" ng-src="{{imgUrl}}" class="img-thumbnail" />
+                    <p ng-if="error!==''">{{error}}</p>
+                </div>
+            </div>  
+        </div>
+        <div class="row">
+            <div class="col-xs-4"></div>
+            <div class="col-xs-4" style="text-align:center;">
+                <div ng-repeat="image in images">              
+                    <input type="button" class="col-xs-2 btn btn-primary" style="float:left;margin-right:10px;" ng-click="chengeToThis($index)" value="{{$index+1}}" />
+                </div>
+            </div>
+            <div class="col-xs-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4"></div>
+            <div class="col-xs-4" style="text-align:center;margin-top:10px;">
+                <input class="btn btn-dark" type="button" value="Get5" ng-click="getFive()" />
+            </div>
+            <div class="col-xs-4"></div>
+        </div>
+    </div>
+</body>
+</html>
+<!--<div ng-repeat="image in images">
+                   <div style="float:left;" ng-click="clicked=$index">{{$index}}<img src="{{image.medium}}" ng-show="clicked === #index" /></div>
+               </div>-->
