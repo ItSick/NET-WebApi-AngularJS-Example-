@@ -17,3 +17,5 @@ Open Web Site
 Choose the folder WebApiDemo
 run the App.
 
+### View Example
+http://itsikedri.com/WebApiDemo/index.html
